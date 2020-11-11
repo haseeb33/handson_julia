@@ -1,7 +1,7 @@
 This is dummy line number 1
 
 
-This is dummy line numebr 2
-This is dummy line numebr 3
+This is dummy line number 2
+This is dummy line number 3
 4th dummy line
 5th dummy line
