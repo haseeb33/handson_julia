@@ -27,7 +27,7 @@ function dirichlet_optimizeParam(Ck, ndkMax, C_, ndMax, numIteration, dirichlet_
         demon = digammaRecurrence(ndMax, C_, dirichlet_obj.sumAlpha)
         
         for k in 1:dirichlet_obj.K
-            numer = digammaRecurrence(ndkMax[k], Ck[k], alpha[k])
+            numer = digammaRecurrence(ndkMax[k], Ck[k], dirichlet_obj.alpha[k])
             dirichlet_obj.alpha[k] *= (numer/demon)
             dirichlet_obj.alpha[k] = max(dirichlet_obj.alpha[k], MINIMUM_PARAM)
         end

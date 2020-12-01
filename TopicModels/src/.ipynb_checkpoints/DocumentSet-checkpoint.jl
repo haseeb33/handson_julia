@@ -46,6 +46,25 @@ function documentset_addDocument(line::String, documentset_obj::DocumentSet)
     documentset_obj.document_size+=1
 end
 
+function documentset_addDocument(words::Array, documentset_obj::DocumentSet)
+    if isempty(words)
+        return nothing
+    end
+    codes = []
+    for i in words
+        if haskey(documentset_obj.vocabulary, i)
+            push!(codes, documentset_obj.vocabulary[i])
+        else 
+            documentset_obj.vocab_count+=1
+            documentset_obj.vocabulary[i] = documentset_obj.vocab_count
+            push!(documentset_obj.reverse_vocabulary, i)
+            push!(codes, documentset_obj.vocab_count)
+        end
+    end
+    push!(documentset_obj.documents, codes)
+    documentset_obj.document_size+=1
+end
+
 function documentset_transform(line::String, documentset_obj::DocumentSet)
     words = split(line)
     codes = []

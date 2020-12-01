@@ -24,7 +24,8 @@ docs/site/
 Manifest.toml
 
 *.DS_Store
-.ipynb_checkpoints/dummy-checkpoint.txt
+*.ipynb_checkpoints
 .ipynb_checkpoints/try_LDA-checkpoint.ipynb
 .ipynb_checkpoints/LDA_with_package-checkpoint.ipynb
+.ipynb_checkpoints/stopwords-checkpoint.txt
 *.csv
