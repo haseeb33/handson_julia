@@ -1,7 +1,7 @@
 global MINIMUM_PARAM = 10E-200
 
 mutable struct Dirichlet
-    K::Int16
+    K::Int64
     alpha::Array{Float64}
     sumAlpha::Float64
 end
